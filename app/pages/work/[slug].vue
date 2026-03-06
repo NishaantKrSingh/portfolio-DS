@@ -8,12 +8,12 @@ const { data: post } = await useAsyncData(`work-${slug}`, () => {
 
 
 const tagColors = [
-  "bg-blue-500/20 text-blue-300 border-blue-500/30",
-  "bg-green-500/20 text-green-300 border-green-500/30",
-  "bg-purple-500/20 text-purple-300 border-purple-500/30",
-  "bg-pink-500/20 text-pink-300 border-pink-500/30",
-  "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
-  "bg-red-500/20 text-red-300 border-red-500/30",
+  "bg-[#8aadf4]/20 text-blue-300 border-[#8aadf4]/30",
+  "bg-[#a6da95]/20 text-green-300 border-[#a6da95]/30",
+  "bg-[#c6a0f6]/20 text-purple-300 border-[#c6a0f6]/30",
+  "bg-[#f5bde6]/20 text-pink-300 border-[#f5bde6]/30",
+  "bg-[#eed49f]/20 text-yellow-300 border-[#eed49f]/30",
+  "bg-[#ed8796]/20 text-red-300 border-[#ed8796]/30",
 ];
 
 const getTagColor = (index) => {
@@ -37,9 +37,16 @@ useSeoMeta({
 <template>
   <div
     v-if="post"
-    class="min-h-screen bg-[#0a0a0a] text-gray-300 px-4 pt-22 pb-20 sm:px-6"
+    class="min-h-screen bg-[#181926] text-gray-300 px-4 pt-22 pb-20 sm:px-6"
   >
     <article class="mx-auto max-w-3xl">
+      <ElementsBreadcrumb
+        :items="[
+          { label: 'home', to: '/' },
+          { label: 'work', to: '/work' },
+          { label: post.company }
+        ]"
+      />
       <h1 class="text-3xl md:text-4xl font-bold font-poppins mb-5 text-white">
         {{ post.company }}
       </h1>
@@ -76,7 +83,7 @@ useSeoMeta({
   <!-- Render the blog post as Prose & Vue components -->
   <!-- <div  -->
   <!-- v-if="post" -->
-  <!-- class="bg-[#0a0a0a] text-gray-300 mx-auto max-w-3xl px-4 sm:px-6"> -->
+  <!-- class="bg-[#181926] text-gray-300 mx-auto max-w-3xl px-4 sm:px-6"> -->
     <!-- <h1 class="text-3xl font-bold mb-4">{{post.company}}</h1> -->
     <!-- <ElementsPic/> -->
     <!-- <p class="text-gray-600 mb-6">{{ post.description }}</p> -->

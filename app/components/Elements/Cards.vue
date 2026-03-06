@@ -11,12 +11,12 @@ const props = defineProps({
 });
 
 const tagColors = [
-  "bg-blue-500/20 text-blue-300 border-blue-500/30",
-  "bg-green-500/20 text-green-300 border-green-500/30",
-  "bg-purple-500/20 text-purple-300 border-purple-500/30",
-  "bg-pink-500/20 text-pink-300 border-pink-500/30",
-  "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
-  "bg-red-500/20 text-red-300 border-red-500/30",
+  "bg-[#8aadf4]/20 text-blue-300 border-[#8aadf4]/30",
+  "bg-[#a6da95]/20 text-green-300 border-[#a6da95]/30",
+  "bg-[#c6a0f6]/20 text-purple-300 border-[#c6a0f6]/30",
+  "bg-[#f5bde6]/20 text-pink-300 border-[#f5bde6]/30",
+  "bg-[#eed49f]/20 text-yellow-300 border-[#eed49f]/30",
+  "bg-[#ed8796]/20 text-red-300 border-[#ed8796]/30",
 ];
 
 const getTagColor = (index) => {
@@ -55,17 +55,17 @@ const formattedDate = computed(() => {
 <template>
   <div class="flex justify-center sm:px-4 md:px-5">
     <div
-      class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full transition duration-300 hover:bg-zinc-900 backdrop-blur-md rounded-2xl p-5 cursor-pointer shadow-lg group border-zinc-800 border-2"
+      class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full transition duration-300 hover:bg-[#1e2030] backdrop-blur-md rounded-2xl p-5 cursor-pointer shadow-lg group border-[#1e2030] border-2"
     >
-      <h2 class="font-bold font-poppins text-lg sm:text-xl text-white">
+      <h2 class="font-bold font-poppins text-lg sm:text-xl text-[#cad3f5]">
         {{ title }}
       </h2>
 
-      <h3 class="text-sm font-mono mt-1 text-gray-400">
+      <h3 class="text-sm font-mono mt-1 text-[#a5adcb]">
         {{ formattedDate }}
       </h3>
 
-      <p class="text-gray-400 mt-3 font-quicksand">
+      <p class="text-[#939ab7] mt-3 font-quicksand">
         {{ show_desc }}
       </p>
 
@@ -80,7 +80,7 @@ const formattedDate = computed(() => {
 
         <span
           v-if="extraCount > 0"
-          class="text-xs px-3 py-1 rounded-full bg-zinc-700 text-gray-300 border border-zinc-600 cursor-pointer"
+          class="text-xs px-3 py-1 rounded-full bg-[#24273a] text-[#939ab7] border border-[#1e2030] cursor-pointer"
         >
           +{{ extraCount }}
         </span>

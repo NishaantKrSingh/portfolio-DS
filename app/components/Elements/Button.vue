@@ -12,7 +12,7 @@ const scrollToForm = () => {
     <div class="p-1">
       <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
         <button
-          class="border flex rounded px-4 py-1 bg-[#0a0a0a] text-white border-gray-600 hover:bg-slate-900"
+          class="border flex rounded px-4 py-1 bg-[#1e2030] text-[#939ab7] border-[#a5adcb] hover:bg-[#24273a] hover:text-[#a5adcb]"
         >
           <svg
             class="flex w-5 h-5 fill-current"
@@ -31,7 +31,7 @@ const scrollToForm = () => {
     <div class="p-1">
       <button
         @click="scrollToForm"
-        class="flex items-center gap-3 rounded-md px-4 py-1 bg-white text-black border border-gray-600 hover:bg-slate-900 hover:text-white transition"
+        class="flex items-center gap-3 rounded-md px-4 py-1 bg-[#cad3f5] text-[#1e2030] border border-[#24273a] hover:bg-[#a5adcb] hover:text-[#24273a] transition"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

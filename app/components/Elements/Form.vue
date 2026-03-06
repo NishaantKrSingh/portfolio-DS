@@ -75,16 +75,16 @@ const handleSubmit = async () => {
 
 <template>
   <section id="contact-form">
-    <div class="bg-[#0a0a0a] px-6 md:px-16 py-12">
-      <div class="max-w-2xl mx-auto p-8 md:p-12 bg-[#0d0d0d] border border-zinc-800 rounded-3xl shadow-2xl">
+    <div class="bg-macchiato-crust px-6 md:px-16 py-12">
+      <div class="max-w-2xl mx-auto p-8 md:p-12 border border-macchiato-mantle rounded-3xl shadow-2xl">
         <h2 class="text-3xl font-bold text-white mb-2">Get in touch</h2>
         <p class="text-zinc-400 mb-8">Have a project in mind? Let's build something together.</p>
 
         <Transition name="fade-slide">
           <div v-if="status.message"
-            :class="status.type === 'success' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-rose-500/10 text-rose-400 border-rose-500/20'"
+            :class="status.type === 'success' ? 'bg-macchiato-green/10 text-macchiato-green border-macchiato-green/20' : 'bg-macchiato-red/10 text-macchiato-red border-macchiato-red/20'"
             class="mb-6 p-4 rounded-xl border text-sm flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full" :class="status.type === 'success' ? 'bg-emerald-500' : 'bg-rose-500'"></span>
+            <span class="w-2 h-2 rounded-full" :class="status.type === 'success' ? 'bg-macchiato-green' : 'bg-macchiato-red'"></span>
             {{ status.message }}
           </div>
         </Transition>
@@ -94,34 +94,34 @@ const handleSubmit = async () => {
             <div class="flex flex-col gap-1.5">
               <label class="text-xs font-semibold uppercase tracking-wider text-zinc-500 ml-1">First Name</label>
               <input v-model="formData.firstName" @blur="touched.firstName = true" type="text" placeholder="John"
-                :class="[touched.firstName && errors.firstName ? 'border-rose-500/50 focus:ring-rose-500/20' : 'border-zinc-800 focus:ring-blue-600/20']"
-                class="bg-zinc-900/50 border text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-4 transition-all placeholder:text-zinc-700" />
-              <p v-if="touched.firstName && errors.firstName" class="text-rose-500 text-xs ml-1 mt-1">{{ errors.firstName }}</p>
+                :class="[touched.firstName && errors.firstName ? 'border-macchiato-red/50 focus:ring-macchiato-red/20' : 'border-zinc-800 focus:ring-macchiato-blue/20']"
+                class=" border text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-4 transition-all placeholder:text-zinc-700" />
+              <p v-if="touched.firstName && errors.firstName" class="text-macchiato-red text-xs ml-1 mt-1">{{ errors.firstName }}</p>
             </div>
 
             <div class="flex flex-col gap-1.5">
               <label class="text-xs font-semibold uppercase tracking-wider text-zinc-500 ml-1">Last Name</label>
               <input v-model="formData.lastName" @blur="touched.lastName = true" type="text" placeholder="Doe"
-                :class="[touched.lastName && errors.lastName ? 'border-rose-500/50 focus:ring-rose-500/20' : 'border-zinc-800 focus:ring-blue-600/20']"
-                class="bg-zinc-900/50 border text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-4 transition-all placeholder:text-zinc-700" />
-              <p v-if="touched.lastName && errors.lastName" class="text-rose-500 text-xs ml-1 mt-1">{{ errors.lastName }}</p>
+                :class="[touched.lastName && errors.lastName ? 'border-macchiato-red/50 focus:ring-macchiato-red/20' : 'border-zinc-800 focus:ring-macchiato-blue/20']"
+                class=" border text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-4 transition-all placeholder:text-zinc-700" />
+              <p v-if="touched.lastName && errors.lastName" class="text-macchiato-red text-xs ml-1 mt-1">{{ errors.lastName }}</p>
             </div>
           </div>
 
           <div class="flex flex-col gap-1.5">
             <label class="text-xs font-semibold uppercase tracking-wider text-zinc-500 ml-1">Email Address</label>
             <input v-model="formData.email" @blur="touched.email = true" type="email" placeholder="john@example.com"
-              :class="[touched.email && errors.email ? 'border-rose-500/50 focus:ring-rose-500/20' : 'border-zinc-800 focus:ring-blue-600/20']"
-              class="bg-zinc-900/50 border text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-4 transition-all placeholder:text-zinc-700" />
-            <p v-if="touched.email && errors.email" class="text-rose-500 text-xs ml-1 mt-1">{{ errors.email }}</p>
+              :class="[touched.email && errors.email ? 'border-macchiato-red/50 focus:ring-macchiato-red/20' : 'border-zinc-800 focus:ring-macchiato-blue/20']"
+              class=" border text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-4 transition-all placeholder:text-zinc-700" />
+            <p v-if="touched.email && errors.email" class="text-macchiato-red text-xs ml-1 mt-1">{{ errors.email }}</p>
           </div>
 
           <div class="flex flex-col gap-1.5">
             <label class="text-xs font-semibold uppercase tracking-wider text-zinc-500 ml-1">Message</label>
             <textarea v-model="formData.message" @blur="touched.message = true" rows="4" placeholder="Tell me about your project..."
-              :class="[touched.message && errors.message ? 'border-rose-500/50 focus:ring-rose-500/20' : 'border-zinc-800 focus:ring-blue-600/20']"
-              class="bg-zinc-900/50 border text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-4 transition-all placeholder:text-zinc-700 resize-none"></textarea>
-            <p v-if="touched.message && errors.message" class="text-rose-500 text-xs ml-1 mt-1">{{ errors.message }}</p>
+              :class="[touched.message && errors.message ? 'border-macchiato-red/50 focus:ring-macchiato-red/20' : 'border-zinc-800 focus:ring-macchiato-blue/20']"
+              class=" border text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-4 transition-all placeholder:text-zinc-700 resize-none"></textarea>
+            <p v-if="touched.message && errors.message" class="text-macchiato-red text-xs ml-1 mt-1">{{ errors.message }}</p>
           </div>
 
           <div class="hidden" aria-hidden="true">
@@ -129,7 +129,7 @@ const handleSubmit = async () => {
           </div>
 
           <button type="submit" :disabled="isSubmitting"
-            class="group w-full bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-800 text-white font-bold py-4 rounded-xl transition-all active:scale-[0.98] flex items-center justify-center gap-3 overflow-hidden relative">
+            class="group w-full bg-macchiato-mauve/20 hover:bg-macchiato-mauve disabled:bg-zinc-800 text-[#cad3f5] hover:text-white font-bold py-4 rounded-xl transition-all active:scale-[0.98] flex items-center justify-center gap-3 overflow-hidden relative">
             
             <div v-if="isSubmitting" class="flex items-center gap-2">
               <svg class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">

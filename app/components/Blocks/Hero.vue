@@ -60,7 +60,7 @@ onUnmounted(() => {
         - Mobile: Transparent/Simple
         - Desktop: Grid Pattern, Border, Rounded-3xl
     -->
-    <div class="bg-[#0a0a0a] relative p-12 w-full md:p-10  md:bg-[#0a0a0a] md:overflow-hidden group">
+    <div class="bg-[#181926] relative p-12 w-full md:p-10  md:bg-[#181926] md:overflow-hidden group">
         
         <!-- Background Grid Pattern (Desktop Only) -->
         <div class="hidden md:block absolute inset-0 z-0 opacity-20 pointer-events-none" 
@@ -72,9 +72,9 @@ onUnmounted(() => {
             <!-- LEFT: Avatar (Shared) -->
             <div class="relative shrink-0">
                 <!-- Avatar Circle -->
-                <div class="relative w-28 h-28 md:w-40 md:h-40 rounded-full border-4 border-[#1c1c1e] md:border-zinc-800 md:bg-zinc-900/50 overflow-hidden shadow-2xl">
+                <div class="relative w-28 h-28 md:w-40 md:h-40 rounded-full border-4 border-[#1e2030] md:border-[#1e2030] md:bg-zinc-900/50 overflow-hidden shadow-2xl">
                     <ElementsAvatar 
-                        path="/profile/profile-pic.jpg" 
+                        path="/profile/profile-pic.png" 
                         class="w-full h-full object-cover"
                     />
                 </div>
@@ -95,14 +95,14 @@ onUnmounted(() => {
                 <!-- 1. HEADER (Shared Logic) -->
                 <div class="space-y-2">
                     <div class="flex flex-wrap items-center gap-3">
-                        <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                            Neha<span class="text-white ml-2 md:text-zinc-400">Keshri</span>
+                        <h1 class="text-3xl md:text-5xl font-bold text-[#cad3f5] font-poppins tracking-tight">
+                            nish<span class="text-[#a5adcb] md:text-[#a5adcb]">ant singh</span>
                         </h1>
-                        <BadgeCheck class="w-6 h-6 md:w-8 md:h-8 text-blue-500 fill-blue-500/10" />
+                        <BadgeCheck class="w-6 h-6 md:w-8 md:h-8 text-[#8aadf4] fill-blue-500/10" />
                     </div>
                     
-                    <p class="text-lg text-zinc-400 font-medium font-mono">
-                        Full-stack Developer
+                    <p class="text-lg text-[#a5adcb] font-medium font-mono">
+                        data analyst
                     </p>
                 </div>
 
@@ -111,40 +111,40 @@ onUnmounted(() => {
                     <div class="h-px w-full bg-zinc-800/60 mb-6"></div>
                     
                     <div class="space-y-3 mb-4 font-mono">
-                        <div class="flex items-center gap-3 text-zinc-300">
-                            <Code2 class="w-5 h-5 text-zinc-500" />
-                            <span>Full-stack Developer<span class="text-zinc-500"><a href="https://codestam.com" target="_blank">@Codestam-Technologies</a></span></span>
+                        <div class="flex items-center gap-3 text-[#939ab7]">
+                            <Code2 class="w-5 h-5 text-[#7dc4e4]" />
+                            <span>Technical Writer<span class="text-[#6e738d]"><a href="https://nishant.stepwik.com" target="_blank">@Stepwik</a></span></span>
                         </div>
-                        <div class="flex items-center gap-3 text-zinc-300">
-                            <Lightbulb class="w-5 h-5 text-zinc-500" />
-                            <span>Building Scalable Web Apps for Growing Businesses</span>
+                        <div class="flex items-center gap-3 text-[#939ab7]">
+                            <Lightbulb class="w-5 h-5 text-[#eed49f]" />
+                            <span>Providing Deep Insights to Help Businesses Grow</span>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-zinc-400 font-mono">
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-[#939ab7] font-mono">
                         <div class="flex items-center gap-3">
-                            <MapPin class="w-4 h-4 text-zinc-600" />
-                            <span>Ranchi, India</span>
+                            <MapPin class="w-4 h-4 text-[#cad3f5]" />
+                            <span>Bengaluru, India</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <Clock class="w-4 h-4 text-zinc-600" />
+                            <Clock class="w-4 h-4 text-[#cad3f5]" />
                             <span>{{ timeDisplay }} <span class="text-zinc-600">// {{ timeDifference }}</span></span>
                         </div>
-                        <div class="flex items-center gap-3 hover:text-white transition-colors cursor-pointer group">
-                            <Phone class="w-4 h-4 text-zinc-600 group-hover:text-green-500" />
-                            <a href="https://wa.me/+918809501856" target="_blank"><span>+91 8809501856</span></a>
+                        <div class="flex items-center gap-3 hover:text-[#b8c0e0] transition-colors cursor-pointer group">
+                            <Phone class="w-4 h-4 text-[#a6da95]" />
+                            <a href="https://wa.me/+917209879211" target="_blank"><span>+91 7209879211</span></a>
                         </div>
-                        <div class="flex items-center gap-3 hover:text-white transition-colors cursor-pointer group">
-                            <Mail class="w-4 h-4 text-zinc-600 group-hover:text-yellow-500" />
-                            <a href="mailto:nehakeshrimail@gmail.com"><span>nehakeshrimail@gmail.com</span></a>
+                        <div class="flex items-center gap-3 hover:text-[#b8c0e0] transition-colors cursor-pointer group">
+                            <Mail class="w-4 h-4 text-[#f5a97f]" />
+                            <a href="mailto:nishaantkrsingh@gmail.com"><span>nishaantkrsingh@gmail.com</span></a>
                         </div>
-                        <div class="flex items-center gap-3 hover:text-white transition-colors cursor-pointer group">
-                            <Globe class="w-4 h-4 text-zinc-600 group-hover:text-blue-500" />
-                            <a href="https://nehakeshri.in"><span>nehakeshri.in</span></a>
+                        <div class="flex items-center gap-3 hover:text-[#b8c0e0] transition-colors cursor-pointer group">
+                            <Globe class="w-4 h-4 text-[#8aadf4]" />
+                            <a href="https://nishsingh.in"><span>nishsingh.in</span></a>
                         </div>
                         <div class="flex items-center gap-3 group">
-                            <Mars class="w-4 h-4 text-zinc-600 group-hover:text-[#E0115F]" />
-                            <span>she/her</span>
+                            <Mars class="w-4 h-4 text-[#91d7e3]" />
+                            <span>he/him</span>
                         </div>
                     </div>
                 </div>
@@ -153,58 +153,58 @@ onUnmounted(() => {
                 <div class="flex flex-col gap-4 md:hidden">
                     
                     <!-- Bio Text -->
-                    <div class="font-mono text-sm text-zinc-400 leading-relaxed border-l-2 border-zinc-700 pl-3 mb-2">
-                        <p>Creative Developer</p>
-                        <p>Building Scalable Web Apps for Growing Businesses</p>
+                    <div class="font-mono text-sm text-macchiato-subtext1 leading-relaxed border-l-2 border-macchiato-overlay1 pl-3 mb-2">
+                        <p>Business Analyst</p>
+                        <p>Providing Deep Insights to Help Businesses Grow</p>
                     </div>
 
                     <!-- List Items with Boxed Icons -->
                     <div class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-macchiato-base text-[#7dc4e4]">
                             <Code2 class="w-5 h-5" />
                         </div>
                         <div class="font-mono text-sm">
-                            <div class="text-zinc-200 font-bold">Full-stack Developer</div>
-                            <div class="text-zinc-500"><a href="https://codestam.com" target="_blank">@Codestam-Technologies</a></div>
+                            <div class="text-macchiato-subtext0 font-bold">Technical Writer</div>
+                            <div class="text-macchiato-overlay2"><a href="https://stepwik.com" target="_blank">@Stepwik</a></div>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-macchiato-base text-[#cad3f5]">
                             <MapPin class="w-5 h-5" />
                         </div>
-                        <div class="font-mono text-sm text-zinc-200">Ranchi, India</div>
+                        <div class="font-mono text-sm text-macchiato-subtext0">Bengaluru, India</div>
                     </div>
 
                     <div class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-macchiato-base text-[#cad3f5]">
                             <Clock class="w-5 h-5" />
                         </div>
                         <div class="font-mono text-sm flex flex-col">
-                            <span class="text-white font-bold tracking-widest">{{ timeDisplay }}</span>
-                            <span class="text-zinc-500 text-xs">{{ timeDifference }}</span>
+                            <span class="text-macchiato-subtext0 font-bold tracking-widest">{{ timeDisplay }}</span>
+                            <span class="text-macchiato-subtext0 text-xs">// {{ timeDifference }}</span>
                         </div>
                     </div>
 
-                    <a href="https://wa.me/+918809501856" target="_blank" class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400 group-hover:text-white group-hover:border-zinc-600 transition-colors">
+                    <a href="https://wa.me/+917209879211" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-macchiato-base text-[#a6da95] group-hover:text-white group-hover:border-zinc-600 transition-colors">
                             <Phone class="w-5 h-5" />
                         </div>
-                        <div class="font-mono text-sm text-zinc-200">+91 8809501856</div>
+                        <div class="font-mono text-sm text-macchiato-subtext0">+91 7209879211</div>
                     </a>
 
-                    <a href="mailto:nehakeshrimail@gmail.com" class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400 group-hover:text-white group-hover:border-zinc-600 transition-colors">
+                    <a href="mailto:nishaantkrsingh@gmail.com" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-macchiato-base text-[#f5a97f] group-hover:text-white group-hover:border-zinc-600 transition-colors">
                             <Mail class="w-5 h-5" />
                         </div>
-                        <div class="font-mono text-sm text-zinc-200">nehakeshrimail@gmail.com</div>
+                        <div class="font-mono text-sm text-macchiato-subtext0">nishaantkrsingh@gmail.com</div>
                     </a>
 
-                    <a href="https://nehakeshri.in" class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1c1c1e] border border-zinc-800 text-zinc-400 group-hover:text-white group-hover:border-zinc-600 transition-colors">
+                    <a href="https://nishsingh.in" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-macchiato-base text-[#8aadf4] group-hover:text-white group-hover:border-zinc-600 transition-colors">
                             <Globe class="w-5 h-5" />
                         </div>
-                        <div class="font-mono text-sm text-zinc-200">https://nehakeshri.in</div>
+                        <div class="font-mono text-sm text-macchiato-subtext0">https://nishsingh.in</div>
                     </a>
                 </div>
                 <!-- End Mobile View -->

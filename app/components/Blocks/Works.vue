@@ -7,7 +7,7 @@ const workData = await queryCollection('work').order('startDate', 'DESC').limit(
 </script>
 
 <template>
-  <div class="relative -mt-5 bg-[#0a0a0a] py-12 md:py-3">
+  <div class="relative -mt-5 bg-[#181926] py-12 md:py-3">
     
     <div
       class="hidden md:block absolute inset-0 z-0 opacity-20 pointer-events-none"
@@ -16,8 +16,8 @@ const workData = await queryCollection('work').order('startDate', 'DESC').limit(
 
     <div class="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-8 md:pb-10">
       <Heading 
-        heading="Work" 
-        description="Things I have worked upon" 
+        heading="work" 
+        description="places i have worked at..." 
         class="mb-10"
       />
 

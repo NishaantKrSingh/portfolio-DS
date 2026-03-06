@@ -16,12 +16,12 @@ const props = defineProps({
 });
 
 const tagColors = [
-  "bg-blue-500/20 text-blue-300 border-blue-500/30",
-  "bg-green-500/20 text-green-300 border-green-500/30",
-  "bg-purple-500/20 text-purple-300 border-purple-500/30",
-  "bg-pink-500/20 text-pink-300 border-pink-500/30",
-  "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
-  "bg-red-500/20 text-red-300 border-red-500/30",
+  "bg-[#8aadf4]/20 text-blue-300 border-[#8aadf4]/30",
+  "bg-[#a6da95]/20 text-green-300 border-[#a6da95]/30",
+  "bg-[#c6a0f6]/20 text-purple-300 border-[#c6a0f6]/30",
+  "bg-[#f5bde6]/20 text-pink-300 border-[#f5bde6]/30",
+  "bg-[#eed49f]/20 text-yellow-300 border-[#eed49f]/30",
+  "bg-[#ed8796]/20 text-red-300 border-[#ed8796]/30",
 ];
 const getTagColor = (index) => {
   return tagColors[index % tagColors.length];
@@ -52,14 +52,14 @@ const duration = computed(
     ></div>
     <div class="absolute left-5 top-5 z-10">
       <span
-        class="flex items-center justify-center w-5 h-5 rounded-full bg-blue-600 border border-blue-400"
+        class="flex items-center justify-center w-5 h-5 rounded-full bg-[#8aadf4] border border-[#7dc4e4]"
       >
         <span class="w-2 h-2 rounded-full bg-black"></span>
       </span>
     </div>
 
     <div
-      class="relative pl-4 pb-4 pt-4 pr-10 border-2 border-zinc-800 rounded-2xl transition duration-300 hover:bg-zinc-900"
+      class="relative pl-4 pb-4 pt-4 pr-10 border-2 border-[#1e2030] rounded-2xl transition duration-300 hover:bg-[#1e2030]"
     >
       <div class="flex flex-col gap-1">
         <div
@@ -67,25 +67,25 @@ const duration = computed(
         >
           <div>
             <h3
-              class="text-2xl font-poppins font-bold text-zinc-100 tracking-tight leading-none"
+              class="text-2xl font-poppins font-bold text-[#cad3f5] tracking-tight leading-none"
             >
               {{ role }}
             </h3>
             <div class="flex items-center gap-2 mt-2">
-              <span class="text-blue-400 font-medium font-mono">{{ company }}</span>
-              <span class="text-zinc-600">•</span>
-              <span class="text-zinc-500 text-sm italic">{{ location }}</span>
+              <span class="text-[#8aadf4] font-medium font-mono">{{ company }}</span>
+              <span class="text-[#a5adcb]">•</span>
+              <span class="text-[#a5adcb] text-sm italic">{{ location }}</span>
             </div>
           </div>
 
           <div
-            class="text-sm font-mono text-zinc-500 bg-zinc-800/50 px-3 md:min-w-55 py-1 rounded-full border border-zinc-600/50 self-start"
+            class="text-sm font-mono text-[#b8c0e0] bg-[#1e2030] px-3 md:min-w-55 py-1 rounded-full self-start"
           >
             {{ duration }}
           </div>
         </div>
 
-        <p class="mt-4 text-gray-400 font-quicksand leading-relaxed max-w-4xl">
+        <p class="mt-4 text-[#b8c0e0] font-quicksand leading-relaxed max-w-4xl">
           {{ description }}
         </p>
 

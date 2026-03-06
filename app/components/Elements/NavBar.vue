@@ -21,13 +21,13 @@ const closeMenu = () => {
 </script>
 
 <template>
-    <nav class="fixed top-4 right-4 z-[9999] font-poppins">
+    <nav class="fixed top-4 right-4 z-9999 font-poppins">
         <div class="flex items-center justify-end">
             
             <!-- Mobile Toggle Button (Visible lg:hidden) -->
             <button 
                 @click="toggleMenu" 
-                class="lg:hidden relative z-[10000] p-2 text-white bg-[#111113]/80 backdrop-blur-md rounded-lg border border-white/10 shadow-lg transition-transform active:scale-95"
+                class="lg:hidden relative z-10000 p-2 text-white bg-[#181926]/80 backdrop-blur-md rounded-lg border border-white/10 shadow-lg transition-transform active:scale-95"
                 aria-label="Toggle Navigation"
             >
                 <div class="relative w-6 h-6 flex items-center justify-center overflow-hidden">
@@ -52,17 +52,17 @@ const closeMenu = () => {
             <div 
                 :class="[
                     isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 lg:translate-x-0 lg:opacity-100',
-                    'fixed inset-0 z-[9998] flex flex-col items-center justify-center bg-[#050505]/95 backdrop-blur-xl transition-all duration-300 ease-in-out',
-                    'lg:static lg:block lg:w-auto lg:bg-[#111113]/60 lg:backdrop-blur-md lg:border lg:border-white/10 lg:rounded-2xl lg:px-6 lg:py-3 lg:shadow-xl'
+                    'fixed inset-0 z-[9998] flex flex-col items-center justify-center bg-[#181926]/95 backdrop-blur-xl transition-all duration-300 ease-in-out',
+                    'lg:static lg:block lg:w-auto lg:bg-[#181926]/60 lg:backdrop-blur-md lg:border lg:border-[#1e2030]/10 lg:rounded-2xl lg:px-6 lg:py-3 lg:shadow-xl'
                 ]"
             >
                 <ul class="flex flex-col items-center space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8">
-                    <li v-for="link in ['Home', 'Blog', 'Work', 'Project']" :key="link">
+                    <li v-for="link in ['home', 'blog', 'work', 'project']" :key="link">
                         <NuxtLink 
-                            :to="link === 'Home' ? '/' : `/${link.toLowerCase()}`"
+                            :to="link === 'home' ? '/' : `/${link.toLowerCase()}`"
                             @click="closeMenu"
-                            class="text-2xl lg:text-sm font-medium text-white/60 transition-colors duration-200 hover:text-white"
-                            active-class="!text-white"
+                            class="text-2xl lg:text-sm font-medium text-white/60 transition-colors duration-200 hover:text-[#c6a0f6]"
+                            active-class="!text-[#c6a0f6]"
                         >
                             {{ link }}
                         </NuxtLink>

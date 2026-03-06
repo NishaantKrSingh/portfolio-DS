@@ -13,12 +13,12 @@ const tagColors = [
 </script>
 
 <template>
-  <div class="bg-[#0a0a0a] min-h-screen">
+  <div class="bg-[#181926] min-h-screen">
     <div class="max-w-xl mx-auto px-1 py-18">
       
       <ElementsHeading
-        heading="Blogs"
-        description="Things I have written recently"
+        heading="blogs"
+        description="things i have written..."
         class="mb-10" 
       />
 

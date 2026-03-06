@@ -33,7 +33,7 @@ const blogData = await queryCollection('blog').order('date', 'DESC').limit(4).al
 </script>
 
 <template>
-  <div class="relative bg-[#0a0a0a] py-1 md:py-2">
+  <div class="relative bg-[#181926] py-1 md:py-2">
     
     <div
       class="hidden md:block absolute inset-0 z-0 opacity-20 pointer-events-none"
@@ -43,8 +43,8 @@ const blogData = await queryCollection('blog').order('date', 'DESC').limit(4).al
     <div class="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-8 md:pb-10">
       
       <Heading
-        heading="Blogs"
-        description="Things I have written recently"
+        heading="blogs"
+        description="things i have recently written..."
         class="mb-8"
       />
 

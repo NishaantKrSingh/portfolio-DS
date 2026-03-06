@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <div class="bg-[#0a0a0a]">
+  <div class="bg-[#181926]">
     <div class="text-gray-600 py-8">
       <div class="container mx-auto px-6 flex flex-col items-center">
         <ul class="flex flex-wrap justify-center space-x-6 mb-6">
@@ -67,7 +67,7 @@
               />
             </svg>
           </a>
-          <a href="https://github.com/Neharepos" target="_blank">
+          <a href="https://github.com/NishaantKrSingh" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -88,7 +88,7 @@
           </a>
         </div>
         <p class="text-sm">
-          &copy; 2026 Neha Keshri. All rights reserved.
+          &copy; 2026 Nishant Singh. All rights reserved.
         </p>
       </div>
     </div>

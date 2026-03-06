@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       crawlLinks: true
     }
   },
-  
+
   routeRules: {
     // Pre-render all content pages at build time (no SQLite at runtime)
     '/': { prerender: true },
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     '/work/**': { prerender: true },
     '/project': { prerender: true },
     '/project/**': { prerender: true },
-    
+
     // Keep API routes as serverless functions
     '/api/**': { cors: true }, // Optional: enable CORS if needed
   },
@@ -39,27 +39,27 @@ export default defineNuxtConfig({
   ],
   modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxtjs/seo'],
   site: {
-    url: 'https://nehakeshri.in',
-    name: 'Neha Keshri - Portfolio',
-    description: 'Portfolio of Neha Keshri, a developer and blogger.',
+    url: 'https://nishsingh.in',
+    name: 'Nishant Singh - Portfolio',
+    description: 'Portfolio of Nishant Kumar Singh, a Data Analyst and blogger.',
     defaultLocale: 'en',
   },
   content: {
     build: {
-
       markdown: {
-        // Add remark plugin to parse $...$ and $$...$$ math syntax
         remarkPlugins: {
           'remark-math': {}
         },
-        // rehype plugin to render math to HTML using KaTeX
         rehypePlugins: {
           'rehype-katex': {
-            // optional options; output: 'html' is common (default)
             output: 'html'
           }
-        }
+        },
+        highlight: {
+          theme: "catppuccin-macchiato",
+          langs: ['python', 'c', 'powershell', 'bash', 'json']
+        },
       }
-    }
+    },
   }
 })

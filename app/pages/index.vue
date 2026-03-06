@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#0a0a0a]">
+  <div class="bg-[#181926]">
     <BlocksHero />
     <BlocksBlogs />
     <BlocksWorks />

@@ -4,7 +4,7 @@ const allPosts = await queryCollection('project').order('duration', 'DESC').all(
 </script>
 
 <template>
-  <div class="bg-[#0a0a0a] min-h-screen">
+  <div class="bg-[#181926] min-h-screen">
     <div class="max-w-4xl mx-auto px-6 py-18">
       
       <ElementsHeading

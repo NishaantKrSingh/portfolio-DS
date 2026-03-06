@@ -4,12 +4,12 @@ const allPosts = await queryCollection('work').order('startDate', 'DESC').all()
 </script>
 
 <template>
-  <div class="bg-[#0a0a0a] min-h-screen">
+  <div class="bg-[#181926] min-h-screen">
     <div class="max-w-4xl mx-auto px-6 md:px-8 py-18">
       
       <ElementsHeading 
-        heading="Work" 
-        description="Things I have written recently" 
+        heading="work" 
+        description="places i have worked at..." 
         class="mb-10"
       />
 
