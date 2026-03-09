@@ -17,20 +17,25 @@ const route = useRoute();
 const router = useRouter();
 
 const selectedTag = ref("");
+const searchQuery = ref("");
 
 // Initialize from URL query
 onMounted(() => {
   if (route.query.tag) {
     selectedTag.value = route.query.tag as string;
   }
+  if (route.query.search) {
+    searchQuery.value = route.query.search as string;
+  }
 });
 
 // Watch for changes to update URL
-watch(selectedTag, (newTag) => {
+watch([selectedTag, searchQuery], ([newTag, newSearch]) => {
   router.push({
     query: {
       ...route.query,
-      tag: newTag || undefined
+      tag: newTag || undefined,
+      search: newSearch || undefined
     }
   });
 });
@@ -41,10 +46,22 @@ const uniqueTags = computed(() => {
 });
 
 const filteredPosts = computed(() => {
-  if (!selectedTag.value) {
-    return allPosts;
+  let posts = allPosts;
+  
+  if (selectedTag.value) {
+    posts = posts.filter(post => post.tags && post.tags.includes(selectedTag.value));
   }
-  return allPosts.filter(post => post.tags && post.tags.includes(selectedTag.value));
+  
+  if (searchQuery.value) {
+    const query = searchQuery.value.toLowerCase();
+    posts = posts.filter(post => {
+      const titleMatch = post.title?.toLowerCase().includes(query);
+      const descMatch = post.description?.toLowerCase().includes(query);
+      return titleMatch || descMatch;
+    });
+  }
+  
+  return posts;
 });
 </script>
 
@@ -58,9 +75,12 @@ const filteredPosts = computed(() => {
         class="mb-10" 
       />
 
-      <!-- Tags Filter -->
-      <div v-if="uniqueTags.length > 0" class="mb-8 flex justify-end">
+      <!-- Filters -->
+      <div class="mb-8 flex flex-col sm:flex-row gap-4 justify-between items-center z-10 w-full relative">
+        <ElementsSearchBar v-model="searchQuery" />
         <ElementsTagDropdown 
+          class="sm:flex-shrink-0"
+          v-if="uniqueTags.length > 0"
           :tags="uniqueTags" 
           v-model="selectedTag" 
         />
