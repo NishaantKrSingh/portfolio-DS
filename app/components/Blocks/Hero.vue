@@ -101,9 +101,9 @@ onUnmounted(() => {
                         <BadgeCheck class="w-6 h-6 md:w-8 md:h-8 text-[#8aadf4] fill-blue-500/10" />
                     </div>
                     
-                    <p class="text-lg text-[#a5adcb] font-medium font-mono">
+                    <!-- <p class="text-lg text-[#a5adcb] font-medium font-mono">
                         data analyst
-                    </p>
+                    </p> -->
                 </div>
 
                 <!-- 2. DESKTOP VIEW (Original Grid Layout) -->
@@ -113,11 +113,11 @@ onUnmounted(() => {
                     <div class="space-y-3 mb-4 font-mono">
                         <div class="flex items-center gap-3 text-[#939ab7]">
                             <Code2 class="w-5 h-5 text-[#7dc4e4]" />
-                            <span>Technical Writer<span class="text-[#6e738d]"><a href="https://nishant.stepwik.com" target="_blank">@Stepwik</a></span></span>
+                            <span>Data Analyst<span class="text-[#6e738d]"><a href="https://corporate.flipkart.net/about-us" target="_blank">@Flipkart</a></span></span>
                         </div>
                         <div class="flex items-center gap-3 text-[#939ab7]">
                             <Lightbulb class="w-5 h-5 text-[#eed49f]" />
-                            <span>Providing Deep Insights to Help Businesses Grow</span>
+                            <span>Building data pipelines and insights to streamline quick commerce operations</span>
                         </div>
                     </div>
 
@@ -140,7 +140,7 @@ onUnmounted(() => {
                         </div>
                         <div class="flex items-center gap-3 hover:text-[#b8c0e0] transition-colors cursor-pointer group">
                             <Globe class="w-4 h-4 text-[#8aadf4]" />
-                            <a href="https://nishsingh.in"><span>nishsingh.in</span></a>
+                            <span>nishsingh.in</span>
                         </div>
                         <div class="flex items-center gap-3 group">
                             <Mars class="w-4 h-4 text-[#91d7e3]" />
@@ -154,8 +154,8 @@ onUnmounted(() => {
                     
                     <!-- Bio Text -->
                     <div class="font-mono text-sm text-macchiato-subtext1 leading-relaxed border-l-2 border-macchiato-overlay1 pl-3 mb-2">
-                        <p>Business Analyst</p>
-                        <p>Providing Deep Insights to Help Businesses Grow</p>
+                        <p class="font-bold">Data Analyst</p>
+                        <p>Building data pipelines and insights to streamline quick commerce operations</p>
                     </div>
 
                     <!-- List Items with Boxed Icons -->
@@ -164,8 +164,8 @@ onUnmounted(() => {
                             <Code2 class="w-5 h-5" />
                         </div>
                         <div class="font-mono text-sm">
-                            <div class="text-macchiato-subtext0 font-bold">Technical Writer</div>
-                            <div class="text-macchiato-overlay2"><a href="https://stepwik.com" target="_blank">@Stepwik</a></div>
+                            <div class="text-macchiato-subtext0 font-bold">Data Analyst</div>
+                            <div class="text-macchiato-overlay2"><a href="https://corporate.flipkart.net/about-us" target="_blank">@Flipkart</a></div>
                         </div>
                     </div>
 
@@ -200,12 +200,12 @@ onUnmounted(() => {
                         <div class="font-mono text-sm text-macchiato-subtext0">nishaantkrsingh@gmail.com</div>
                     </a>
 
-                    <a href="https://nishsingh.in" class="flex items-center gap-4 group">
+                    <div class="flex items-center gap-4 group">
                         <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-macchiato-base text-[#8aadf4] group-hover:text-white group-hover:border-zinc-600 transition-colors">
                             <Globe class="w-5 h-5" />
                         </div>
                         <div class="font-mono text-sm text-macchiato-subtext0">https://nishsingh.in</div>
-                    </a>
+                    </div>
                 </div>
                 <!-- End Mobile View -->
                 
